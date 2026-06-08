@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Qué se está cocinando en la reforma al Código Monetario? · Mónica Alemán</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --azul-an:     #0D3B8C;
+  --azul-ac:     #1B9BD1;
+  --azul-light:  #E8F4FC;
+  --gris-fondo:  #EEEFF3;
+  --gris-card:   #FFFFFF;
+  --gris-borde:  #D8DCE8;
+  --gris-texto:  #4A5568;
+  --rojo:        #C0392B;
+  --rojo-bg:     #FDECEA;
+  --amarillo:    #B7791F;
+  --amarillo-bg: #FFFBEB;
+  --verde:       #1A6B3A;
+  --verde-bg:    #EAFAF1;
+  --negro:       #1A1A2E;
+  --blanco:      #FFFFFF;
+  --sans:   'Montserrat', sans-serif;
+  --body:   'Open Sans', sans-serif;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --sombra: 0 2px 12px rgba(13,59,140,0.10);
+  --sombra-hover: 0 6px 24px rgba(13,59,140,0.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--body);
+  background:var(--gris-fondo);
+  color:var(--negro);
+  font-size:15px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:900px;margin:0 auto;padding:0 1.5rem}
+
+/* TOPBAR */
+.topbar{
+  background:var(--azul-an);
+  padding:.45rem 1.5rem;
+  display:flex;justify-content:space-between;align-items:center;
+  gap:1rem;flex-wrap:wrap;
+}
+.topbar-l{
+  font-family:var(--sans);font-size:.6rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.65);
+}
+.topbar-r{
+  font-family:var(--sans);font-size:.6rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;
+  background:var(--azul-ac);color:#fff;
+  padding:.22rem .75rem;border-radius:2px;
+}
+
+/* HEADER */
+.header{
+  background:var(--gris-fondo);
+  padding:2.5rem 1.5rem 0;
+}
+.header-inner{
+  max-width:980px;margin:0 auto;
+  display:grid;grid-template-columns:1fr auto;
+  gap:2rem;align-items:start;
+}
+.header-marca{
+  display:flex;flex-direction:column;gap:.2rem;
+  margin-bottom:1.5rem;
+}
+.header-card{
+  background:var(--blanco);
+  border-radius:var(--r-md);
+  padding:1.25rem 1.5rem;
+  box-shadow:var(--sombra);
+  max-width:520px;
+  margin-bottom:1.5rem;
+}
+.hcard-tag{
+  font-family:var(--sans);font-size:.6rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--azul-ac);margin-bottom:.4rem;
+  display:flex;align-items:center;gap:.35rem;
+}
+.hcard-titulo{
+  font-family:var(--sans);font-size:1.5rem;font-weight:900;
+  color:var(--azul-an);line-height:1.15;margin-bottom:.3rem;
+}
+.hcard-titulo span{color:var(--azul-ac);}
+.hcard-sub{
+  font-family:var(--body);font-size:.82rem;
+  color:var(--gris-texto);line-height:1.55;
+}
+.header-fecha{
+  font-family:var(--sans);font-size:.68rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--azul-an);padding:.5rem 0 1.5rem;
+  border-top:2px solid var(--gris-borde);
+}
+
+/* ANIMACIONES */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.fu{animation:fadeUp .5s ease both;}
+.d1{animation-delay:.08s}.d2{animation-delay:.18s}
+.d3{animation-delay:.28s}.d4{animation-delay:.38s}
+
+/* PIE DE PÁGINA */
+footer{
+  background:var(--azul-an);
+  border-top:3px solid var(--azul-ac);
+  padding:2.5rem 1.5rem 1.5rem;
+}
+.footer-grid{
+  max-width:980px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:2rem;
+  margin-bottom:2rem;
+}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
+.ft{
+  font-family:var(--sans);font-size:.88rem;font-weight:800;
+  color:#fff;margin-bottom:.6rem;
+}
+.fb{font-size:.78rem;color:rgba(255,255,255,.65);line-height:1.7;}
+.fb li{padding:.1rem 0;}
+.footer-seal{
+  max-width:980px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+  padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.15);
+}
+.seal-left{display:flex;align-items:center;gap:1rem;}
+.seal-names{display:flex;flex-direction:column;gap:.1rem;}
+.seal-an{
+  font-family:var(--sans);font-size:.85rem;font-weight:800;
+  color:#fff;letter-spacing:.04em;
+}
+.seal-rep{
+  font-family:var(--sans);font-size:.55rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.5);
+}
+.seal-right{
+  font-family:var(--sans);font-size:.55rem;font-weight:600;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(255,255,255,.4);text-align:right;
+}
+
+/* DECLARACION */
+.declaracion{
+  background:var(--azul-an);
+  padding:2rem 1.5rem;
+}
+.declaracion-inner{max-width:900px;margin:0 auto}
+.declaracion blockquote{
+  font-family:var(--sans);font-size:1rem;font-weight:600;
+  font-style:italic;color:#fff;line-height:1.7;
+  border-left:4px solid var(--azul-ac);padding-left:1.25rem;
+  margin-bottom:.75rem;
+}
+.declaracion cite{
+  font-family:var(--sans);font-size:.62rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--azul-ac);font-style:normal;
+}
+
+/* SECCIONES */
+.seccion{padding:2.5rem 1.5rem;}
+.seccion.bg-blanco{background:var(--blanco);}
+.seccion.bg-gris{background:var(--gris-fondo);}
+.seccion.bg-azul{background:var(--azul-an);}
+
+.sec-etiqueta{
+  font-family:var(--sans);font-size:.58rem;font-weight:700;
+  letter-spacing:.24em;text-transform:uppercase;
+  color:var(--azul-ac);margin-bottom:.35rem;
+  display:flex;align-items:center;gap:.5rem;
+}
+.sec-etiqueta::before{
+  content:'';display:block;width:20px;height:3px;
+  background:var(--azul-ac);border-radius:2px;
+}
+.bg-azul .sec-etiqueta{color:#7EC8E3;}
+.bg-azul .sec-etiqueta::before{background:#7EC8E3;}
+.sec-titulo{
+  font-family:var(--sans);font-size:1.5rem;font-weight:900;
+  color:var(--azul-an);line-height:1.2;margin-bottom:1.25rem;
+}
+.bg-azul .sec-titulo{color:#fff;}
+.sec-titulo span{color:var(--azul-ac);}
+.bg-azul .sec-titulo span{color:#7EC8E3;}
+.sec-intro{
+  font-family:var(--body);font-size:.9rem;
+  color:var(--gris-texto);max-width:700px;
+  margin-bottom:1.75rem;line-height:1.7;
+}
+.bg-azul .sec-intro{color:rgba(255,255,255,.75);}
+
+/* CARDS RESUMEN */
+.cards-wrap{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+  gap:1rem;margin-bottom:2rem;
+}
+.kpi{
+  background:var(--blanco);
+  border-radius:var(--r-md);
+  padding:1.1rem 1rem;
+  box-shadow:var(--sombra);
+  border-top:3px solid var(--azul-ac);
+}
+.kpi.rojo{border-top-color:var(--rojo);}
+.kpi.verde{border-top-color:var(--verde);}
+.kpi.amarillo{border-top-color:var(--amarillo);}
+.kpi-num{
+  font-family:var(--sans);font-size:1.7rem;font-weight:900;
+  color:var(--azul-an);line-height:1;margin-bottom:.3rem;
+}
+.kpi.rojo .kpi-num{color:var(--rojo);}
+.kpi.verde .kpi-num{color:var(--verde);}
+.kpi.amarillo .kpi-num{color:var(--amarillo);}
+.kpi-label{
+  font-family:var(--sans);font-size:.65rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gris-texto);
+}
+
+/* CAJA EXPLICACION */
+.caja{
+  background:var(--blanco);
+  border-radius:var(--r-md);
+  padding:1.4rem 1.5rem;
+  box-shadow:var(--sombra);
+  margin-bottom:1.25rem;
+}
+.caja-titulo{
+  font-family:var(--sans);font-size:.85rem;font-weight:800;
+  color:var(--azul-an);margin-bottom:.5rem;
+  display:flex;align-items:center;gap:.5rem;
+}
+.caja-titulo .ico{font-size:1rem;}
+.caja p{
+  font-family:var(--body);font-size:.87rem;
+  color:var(--gris-texto);line-height:1.7;
+}
+.caja.rojo-borde{border-left:4px solid var(--rojo);}
+.caja.verde-borde{border-left:4px solid var(--verde);}
+.caja.amarillo-borde{border-left:4px solid var(--amarillo);}
+.caja.azul-borde{border-left:4px solid var(--azul-ac);}
+
+/* ANALOGIA / DESTACADO */
+.analogia{
+  background:var(--azul-light);
+  border-radius:var(--r-md);
+  padding:1.25rem 1.5rem;
+  margin-bottom:1.5rem;
+  border-left:4px solid var(--azul-ac);
+}
+.analogia-titulo{
+  font-family:var(--sans);font-size:.7rem;font-weight:800;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:var(--azul-ac);margin-bottom:.4rem;
+}
+.analogia p{
+  font-family:var(--body);font-size:.9rem;
+  color:var(--azul-an);line-height:1.65;font-style:italic;
+}
+
+/* TABLA DIAGNOSTICO */
+.tabla-wrap{overflow-x:auto;margin-bottom:1.5rem;}
+table{
+  width:100%;border-collapse:collapse;
+  font-family:var(--body);font-size:.8rem;
+}
+thead th{
+  background:var(--azul-an);color:#fff;
+  font-family:var(--sans);font-size:.65rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.6rem .8rem;text-align:left;
+}
+tbody tr:nth-child(even){background:var(--azul-light);}
+tbody tr:nth-child(odd){background:var(--blanco);}
+tbody td{
+  padding:.55rem .8rem;
+  color:var(--gris-texto);
+  vertical-align:top;
+  border-bottom:1px solid var(--gris-borde);
+}
+.tag-excluir{
+  display:inline-block;
+  background:var(--rojo-bg);color:var(--rojo);
+  font-family:var(--sans);font-size:.6rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.15rem .5rem;border-radius:3px;
+}
+.tag-conservar{
+  display:inline-block;
+  background:var(--verde-bg);color:var(--verde);
+  font-family:var(--sans);font-size:.6rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.15rem .5rem;border-radius:3px;
+}
+.tag-revisar{
+  display:inline-block;
+  background:var(--amarillo-bg);color:var(--amarillo);
+  font-family:var(--sans);font-size:.6rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.15rem .5rem;border-radius:3px;
+}
+
+/* PASOS / NUMERADOS */
+.pasos{display:flex;flex-direction:column;gap:1rem;margin-bottom:1.5rem;}
+.paso{
+  display:flex;gap:1rem;align-items:flex-start;
+  background:var(--blanco);border-radius:var(--r-md);
+  padding:1.1rem 1.25rem;box-shadow:var(--sombra);
+}
+.paso-num{
+  flex-shrink:0;
+  width:32px;height:32px;
+  background:var(--azul-an);color:#fff;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:var(--sans);font-size:.8rem;font-weight:800;
+  margin-top:.1rem;
+}
+.paso-rojo .paso-num{background:var(--rojo);}
+.paso-cuerpo{}
+.paso-titulo{
+  font-family:var(--sans);font-size:.85rem;font-weight:800;
+  color:var(--azul-an);margin-bottom:.25rem;
+}
+.paso-rojo .paso-titulo{color:var(--rojo);}
+.paso-texto{
+  font-family:var(--body);font-size:.82rem;
+  color:var(--gris-texto);line-height:1.65;
+}
+
+/* RIESGO BANNER */
+.riesgo{
+  background:var(--rojo-bg);
+  border:1px solid #f5c6cb;
+  border-radius:var(--r-md);
+  padding:1.25rem 1.5rem;
+  margin-bottom:1.5rem;
+  display:flex;gap:1rem;align-items:flex-start;
+}
+.riesgo-ico{font-size:1.6rem;flex-shrink:0;}
+.riesgo-titulo{
+  font-family:var(--sans);font-size:.85rem;font-weight:800;
+  color:var(--rojo);margin-bottom:.3rem;
+}
+.riesgo p{
+  font-family:var(--body);font-size:.83rem;
+  color:var(--rojo);line-height:1.65;opacity:.85;
+}
+
+
+@media(max-width:640px){
+  .header-inner{grid-template-columns:1fr;}
+  .hcard-titulo{font-size:1.2rem;}
+  .sec-titulo{font-size:1.2rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- BARRA SUPERIOR -->
+<div class="topbar">
+  <span class="topbar-l">Asamblea Nacional · República del Ecuador · Período 2025–2029</span>
+  <span class="topbar-r">Análisis Legislativo · Junio 2026</span>
+</div>
+
+<!-- CABECERA -->
+<header class="header">
+  <div class="header-inner">
+    <div>
+      <div class="header-marca fu" style="display:flex;flex-direction:column;gap:0;line-height:1;">
+        <div style="font-family:var(--sans);font-size:1.9rem;font-weight:400;color:var(--azul-an);letter-spacing:.01em;margin-bottom:.05em;">Mónica</div>
+        <div style="font-family:var(--sans);font-size:3.8rem;font-weight:900;color:var(--azul-ac);text-transform:uppercase;letter-spacing:-.02em;line-height:.95;margin-bottom:.18em;">ALEMÁN</div>
+        <div style="font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--azul-an);display:flex;align-items:center;gap:.5rem;">
+          ASAMBLEÍSTA
+          <svg viewBox="0 0 48 30" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:22px;border-radius:3px;display:inline-block;vertical-align:middle;">
+            <rect x="0" y="0"  width="48" height="15" fill="#F7D117"/>
+            <rect x="0" y="15" width="48" height="7.5" fill="#003082"/>
+            <rect x="0" y="22.5" width="48" height="7.5" fill="#CE1126"/>
+          </svg>
+        </div>
+      </div>
+      <div class="fu d1" style="font-family:var(--sans);font-size:.65rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gris-texto);padding-bottom:1rem;border-bottom:2px solid var(--gris-borde);">
+        JUNIO 2026 · CANTONES DE PICHINCHA
+      </div>
+    </div>
+
+    <div class="header-card fu d2">
+      <div class="hcard-tag">Análisis Legislativo</div>
+      <div class="hcard-titulo">La reforma que quiso <span>ser más</span> de lo que debía</div>
+      <div class="hcard-sub">Qué observé en el borrador de reforma al Código Monetario y por qué importa para usted como ciudadano.</div>
+    </div>
+  </div>
+
+  <div class="wrap fu d3">
+    <div class="header-fecha">
+      Base legal: Art. 136 CRE · Art. 56 LOFL · Comisión de Régimen Económico y Tributario · Junio 2026
+    </div>
+  </div>
+</header>
+
+<!-- DECLARACION -->
+<div class="declaracion">
+  <div class="declaracion-inner">
+    <blockquote>
+      "Apoyar la protección del usuario financiero es correcto y necesario. Pero si lo hacemos con vicios de procedimiento, arriesgamos que la Corte Constitucional bote toda la ley —incluyendo lo bueno— y los ciudadanos afectados queden sin protección por meses o años más."
+    </blockquote>
+    <cite>Ing. Mónica Alemán Mármol · Asambleísta por los Cantones de Pichincha · Junio 2026</cite>
+  </div>
+</div>
+
+<!-- SECCION 1: ¿DE QUÉ TRATA? -->
+<div class="seccion bg-blanco">
+  <div class="wrap">
+    <div class="sec-etiqueta">Sección 01</div>
+    <div class="sec-titulo">¿De qué trata esta reforma? <span>El punto de partida</span></div>
+    <p class="sec-intro">Cuatro asambleístas presentaron proyectos de ley para proteger a los ecuatorianos del sistema financiero. La Comisión decidió unirlos en uno solo. Hasta ahí, bien. El problema vino después.</p>
+
+    <div class="cards-wrap">
+      <div class="kpi verde">
+        <div class="kpi-num">4</div>
+        <div class="kpi-label">Proyectos originales unificados</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-num">1</div>
+        <div class="kpi-label">Eje común: proteger al usuario financiero</div>
+      </div>
+      <div class="kpi rojo">
+        <div class="kpi-num">17+</div>
+        <div class="kpi-label">Disposiciones ajenas incorporadas al borrador</div>
+      </div>
+      <div class="kpi amarillo">
+        <div class="kpi-num">⚠️</div>
+        <div class="kpi-label">Riesgo de inconstitucionalidad total</div>
+      </div>
+    </div>
+
+    <div class="caja azul-borde">
+      <div class="caja-titulo"><span class="ico">🏦</span> Los cuatro proyectos originales hablaban de:</div>
+      <p>
+        <strong>Carmen Tiupul:</strong> proteger a socios de cooperativas en liquidación.<br>
+        <strong>Virgilio Saquicela:</strong> regular los intereses de mora en créditos.<br>
+        <strong>Vanessa Álava:</strong> facilitar el refinanciamiento de deudas.<br>
+        <strong>Adrián Castro:</strong> establecer el orden de pago en liquidaciones financieras.<br><br>
+        Todos giran alrededor de un mismo eje: <strong>defender al ciudadano que está en problemas con el sistema financiero</strong>.
+      </p>
+    </div>
+
+    <div class="analogia">
+      <div class="analogia-titulo">📖 Para entenderlo con una analogía</div>
+      <p>Imagine que cuatro vecinos presentan una queja formal al municipio sobre la falta de semáforos en su barrio. El municipio decide unir las cuatro quejas en un solo expediente. Hasta ahí correcto. Pero luego alguien aprovecha ese expediente para incluir también la reforma al presupuesto de parques, la privatización del agua y el cambio de nombre de la avenida principal. Eso ya no es "la misma queja". Es usar un trámite para meter otras agendas sin el proceso que corresponde.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SECCION 2: ¿QUE SE METIO? -->
+<div class="seccion bg-gris">
+  <div class="wrap">
+    <div class="sec-etiqueta">Sección 02</div>
+    <div class="sec-titulo">¿Qué se metió de más? <span>Las adiciones que cuestionamos</span></div>
+    <p class="sec-intro">En el borrador del informe, junto a las reformas legítimas sobre protección al usuario, aparecieron disposiciones sobre temas completamente distintos. Aquí las principales:</p>
+
+    <div class="pasos">
+      <div class="paso paso-rojo">
+        <div class="paso-num">1</div>
+        <div class="paso-cuerpo">
+          <div class="paso-titulo">Reforma integral al Mercado de Valores</div>
+          <div class="paso-texto">El asambleísta Villacrés Salazar incorporó 12 reformas a la Ley de Mercado de Valores más disposiciones adicionales: cambio de nombre del Consejo Nacional de Valores, mandatos de inversión tecnológica al Banco Central, y reforma al Código de Finanzas Públicas sobre emisión de bonos del Estado. En total, 17 disposiciones autónomas disfrazadas de "observaciones".</div>
+        </div>
+      </div>
+      <div class="paso paso-rojo">
+        <div class="paso-num">2</div>
+        <div class="paso-cuerpo">
+          <div class="paso-titulo">Reforma al Código de Planificación y Finanzas Públicas</div>
+          <div class="paso-texto">Se incluyó una disposición que modifica cómo el Estado emite y negocia bonos y Notas del Tesoro. Eso es política fiscal en sentido estricto, no tiene nada que ver con proteger al usuario de una cooperativa en liquidación.</div>
+        </div>
+      </div>
+      <div class="paso">
+        <div class="paso-num">3</div>
+        <div class="paso-cuerpo">
+          <div class="paso-titulo">Publicación digital de estados financieros (Art. 221)</div>
+          <div class="paso-texto">Una reforma sobre cómo los bancos publican sus balances en su página web. Su objetivo es la transparencia hacia inversionistas y analistas, no la protección al usuario vulnerable. Conexión con el eje original: ninguna.</div>
+        </div>
+      </div>
+      <div class="paso">
+        <div class="paso-num">4</div>
+        <div class="paso-cuerpo">
+          <div class="paso-titulo">Tasa de interés "inclusiva"</div>
+          <div class="paso-texto">Una disposición para crear tasas especiales para personas sin historial crediticio. La inclusión financiera (meter nuevos usuarios al sistema) es un objetivo opuesto al de la protección (defender a los que ya están adentro y están en problemas). No es lo mismo expandir el acceso que proteger al que ya tiene una deuda que no puede pagar.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="riesgo">
+      <div class="riesgo-ico">⚠️</div>
+      <div>
+        <div class="riesgo-titulo">El problema de fondo: elusión del proceso legal</div>
+        <p>La ley exige que todo proyecto de ley pase por una "calificación" del Consejo de Administración Legislativa (CAL), que verifica que el proyecto trate <strong>una sola materia</strong>. Al meter estas disposiciones como "observaciones" dentro de un trámite ya calificado, se evita ese filtro. Pero eso no hace el problema desaparecer: lo convierte en un vicio de procedimiento que puede derribar toda la ley.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECCION 3: LA REGLA DE UNIDAD DE MATERIA -->
+<div class="seccion bg-blanco">
+  <div class="wrap">
+    <div class="sec-etiqueta">Sección 03</div>
+    <div class="sec-titulo">La regla que se está violando: <span>Unidad de Materia</span></div>
+    <p class="sec-intro">El Art. 136 de la Constitución establece que una ley debe tratar una sola materia. No es burocracia: es garantía democrática.</p>
+
+    <div class="analogia">
+      <div class="analogia-titulo">📖 ¿Por qué existe esta regla?</div>
+      <p>Si en una sola ley se pueden meter temas completamente distintos, nadie puede enterarse de qué se está aprobando realmente. Los ciudadanos y los mismos asambleístas no tienen forma de debatir con claridad. La Corte Constitucional lo dijo en 2022: la unidad de materia existe para garantizar "un debate público centrado en una materia más o menos delimitada, sin dispersiones inadecuadas".</p>
+    </div>
+
+    <div class="caja azul-borde">
+      <div class="caja-titulo"><span class="ico">🔎</span> ¿Cómo se prueba que hay "conexidad" entre los temas?</div>
+      <p>La jurisprudencia constitucional establece que la conexión debe ser <strong>clara, específica, estrecha, necesaria y evidente</strong>. No basta con decir "todo tiene que ver con el sistema financiero". Hay que demostrar conexión temática, sistemática, teleológica y funcional. En este caso, las reformas al mercado de valores y a la deuda pública no pasan ninguna de esas pruebas respecto al eje protectorio original.</p>
+    </div>
+
+    <div class="caja rojo-borde">
+      <div class="caja-titulo"><span class="ico">🚩</span> El truco argumentativo del borrador</div>
+      <p>El borrador del informe intenta "redefinir" el eje del proyecto como "fortalecimiento del sistema monetario, financiero <em>y de mercado de valores</em>" para así justificar que todo cabe dentro. El problema: esa definición ampliada no existía en ninguno de los cuatro proyectos originales, ni en la resolución del CAL que autorizó la unificación. La Corte Constitucional ha rechazado expresamente esa lógica de "redefinir el eje para que quepa todo".</p>
+    </div>
+  </div>
+</div>
+
+<!-- SECCION 4: TABLA DIAGNOSTICO -->
+<div class="seccion bg-gris">
+  <div class="wrap">
+    <div class="sec-etiqueta">Sección 04</div>
+    <div class="sec-titulo">Diagnóstico disposición por disposición: <span>¿qué debe quedarse y qué debe salir?</span></div>
+    <p class="sec-intro">Después de analizar cada artículo del borrador, esta es la recomendación técnica para la Comisión:</p>
+
+    <div class="tabla-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Disposición</th>
+            <th>Tema</th>
+            <th>Diagnóstico</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Art. 1 — Supervisión de tarifas (62.36)</td>
+            <td>Control de comisiones bancarias</td>
+            <td><span class="tag-conservar">✔ Conservar</span></td>
+          </tr>
+          <tr>
+            <td>Art. 1 — Cláusula de cierre (62.37)</td>
+            <td>Disposición general de respaldo</td>
+            <td><span class="tag-conservar">✔ Conservar</span></td>
+          </tr>
+          <tr>
+            <td>Art. 1 — Transparencia al usuario (152.3)</td>
+            <td>Información al deudor sobre su crédito</td>
+            <td><span class="tag-conservar">✔ Conservar</span></td>
+          </tr>
+          <tr>
+            <td>Art. 1 — Intereses de mora (194.1)</td>
+            <td>Cálculo técnico de recargos por mora</td>
+            <td><span class="tag-conservar">✔ Conservar</span></td>
+          </tr>
+          <tr>
+            <td>Art. 1 — Publicación digital de estados financieros (221)</td>
+            <td>Transparencia hacia el mercado e inversionistas</td>
+            <td><span class="tag-excluir">✖ Excluir</span></td>
+          </tr>
+          <tr>
+            <td>Art. 1 — Tarjetas de crédito y pago mínimo (255.12)</td>
+            <td>Protección al tarjetahabiente</td>
+            <td><span class="tag-conservar">✔ Conservar</span></td>
+          </tr>
+          <tr>
+            <td>Art. 1 — Publicación de cargos (246.3)</td>
+            <td>Transparencia de costos al usuario</td>
+            <td><span class="tag-conservar">✔ Conservar</span></td>
+          </tr>
+          <tr>
+            <td>Art. 1 — Régimen fiduciario de liquidación (312)</td>
+            <td>Derogación de mecanismo de fideicomisos</td>
+            <td><span class="tag-revisar">⚡ Revisar redacción</span></td>
+          </tr>
+          <tr>
+            <td>Art. 1 — Cierre del proceso de liquidación (318)</td>
+            <td>Protección en liquidación de cooperativas</td>
+            <td><span class="tag-conservar">✔ Conservar</span></td>
+          </tr>
+          <tr>
+            <td>Art. 2 íntegro — Reforma a la Ley de Mercado de Valores</td>
+            <td>12 reformas al régimen bursátil</td>
+            <td><span class="tag-excluir">✖ Excluir en bloque</span></td>
+          </tr>
+          <tr>
+            <td>Art. 2 — Cambio de nombre del Consejo de Valores</td>
+            <td>Renombrar institución bursátil</td>
+            <td><span class="tag-excluir">✖ Excluir</span></td>
+          </tr>
+          <tr>
+            <td>Art. 2 — Tasa de interés inclusiva</td>
+            <td>Créditos para personas sin historial</td>
+            <td><span class="tag-excluir">✖ Excluir</span></td>
+          </tr>
+          <tr>
+            <td>Art. 2 — Plataformas tecnológicas del BCE</td>
+            <td>Infraestructura de pagos digitales</td>
+            <td><span class="tag-excluir">✖ Excluir</span></td>
+          </tr>
+          <tr>
+            <td>Disposición Reformatoria Primera — COPLAFIP</td>
+            <td>Emisión de bonos y deuda pública</td>
+            <td><span class="tag-excluir">✖ Excluir</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="caja verde-borde">
+      <div class="caja-titulo"><span class="ico">✅</span> La ruta constructiva existe</div>
+      <p>No es necesario botar todo el proyecto. La Comisión puede aprobar las disposiciones que sí protegen al usuario —que son la mayoría— y excluir las que no tienen conexión. Los asambleístas cuyas iniciativas sean excluidas pueden presentarlas como proyectos independientes ante el CAL, que es el camino correcto. Así se salvan las reformas legítimas y se elimina el riesgo de inconstitucionalidad.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SECCION 5: ¿QUE RIESGO CORREMOS? -->
+<div class="seccion bg-azul">
+  <div class="wrap">
+    <div class="sec-etiqueta">Sección 05</div>
+    <div class="sec-titulo">¿Qué le pasa a usted si aprobamos esto <span>con vicios?</span></div>
+    <p class="sec-intro" style="color:rgba(255,255,255,.75)">Si la ley pasa con estas disposiciones ajenas y alguien la impugna ante la Corte Constitucional, las consecuencias son concretas:</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;">
+      <div class="caja" style="margin-bottom:0">
+        <div class="caja-titulo"><span class="ico">⚖️</span> Riesgo 1 — Inconstitucionalidad total</div>
+        <p>Si el procedimiento está viciado, la Corte puede declarar inconstitucional <em>toda</em> la ley, no solo las partes problemáticas. Eso incluye las buenas reformas sobre intereses de mora, protección al deudor y liquidación de cooperativas.</p>
+      </div>
+      <div class="caja" style="margin-bottom:0">
+        <div class="caja-titulo"><span class="ico">⏳</span> Riesgo 2 — Demora de años</div>
+        <p>Una declaratoria de inconstitucionalidad obliga a reiniciar el trámite desde cero. Mientras eso ocurre, miles de socios cooperativistas afectados por liquidaciones y deudores en mora siguen sin la protección que la ley debería darles.</p>
+      </div>
+      <div class="caja" style="margin-bottom:0">
+        <div class="caja-titulo"><span class="ico">🏛️</span> Riesgo 3 — Precedente peligroso</div>
+        <p>Permitir que cualquier asambleísta meta proyectos autónomos completos "disfrazados de observaciones" crea un precedente que debilita todo el sistema legislativo. En el futuro, el mecanismo podría usarse para aprobar cualquier cosa sin el debate público que merece.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECCION 6: POSICION -->
+<div class="seccion bg-blanco">
+  <div class="wrap">
+    <div class="sec-etiqueta">Sección 06</div>
+    <div class="sec-titulo">Mi posición: <span>proteger lo que vale la pena proteger</span></div>
+    <p class="sec-intro">Quiero ser clara sobre lo que no es este análisis y lo que sí es.</p>
+
+    <div class="caja verde-borde">
+      <div class="caja-titulo"><span class="ico">✅</span> Lo que apoyo completamente</div>
+      <p>Las reformas sobre intereses de mora, prohibición del anatocismo (cobrar interés sobre interés), información transparente al usuario de crédito, regulación de tarifas y comisiones bancarias, y el ordenamiento del proceso de liquidación de cooperativas. Esas reformas son necesarias, son justas y guardan perfecta coherencia con el objetivo original del proyecto. Deben aprobarse.</p>
+    </div>
+
+    <div class="caja rojo-borde">
+      <div class="caja-titulo"><span class="ico">✖</span> Lo que no puedo apoyar</div>
+      <p>Aprobar un borrador que incluye reformas estructurales al mercado de valores, a la política de deuda pública y a la infraestructura tecnológica del Banco Central, temas completamente ajenos, usando el trámite de este proyecto como atajo para evitar el proceso legislativo que corresponde. No porque esos temas no sean importantes, sino porque tienen que tramitarse de forma transparente, con debate público, informe técnico y calificación del CAL.</p>
+    </div>
+
+    <div class="analogia">
+      <div class="analogia-titulo">🎯 En resumen</div>
+      <p>El objetivo de estas observaciones no es bloquear la ley: es salvarla. Un trámite limpio garantiza que las reformas legítimas lleguen a los ciudadanos y no sean derribadas por un vicio evitable. La protección del usuario financiero es demasiado importante para arriesgarla en un procedimiento que puede ser impugnado.</p>
+    </div>
+
+    <div class="caja azul-borde">
+      <div class="caja-titulo"><span class="ico">📄</span> ¿Quiere leer el análisis técnico completo?</div>
+      <p>Presenté estas observaciones formalmente a la Comisión Especializada Permanente de Régimen Económico y Tributario antes de la votación. El documento completo incluye el análisis jurídico detallado, la jurisprudencia constitucional aplicable y el cuadro completo de disposiciones con su diagnóstico. Puede solicitarlo a través de las redes oficiales de la Asambleísta.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PIE DE PÁGINA -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="ft">Ing. Mónica Alemán Mármol</div>
+      <p class="fb">Asambleísta por los Cantones de Pichincha · Asamblea Nacional del Ecuador · Período 2025–2029.<br><br>
+      Análisis elaborado en ejercicio de las atribuciones conferidas por el Art. 120 núm. 9 de la Constitución de la República. Las observaciones formales fueron presentadas mediante documento técnico-jurídico ante la Comisión Especializada Permanente de Régimen Económico y Tributario y su Regulación y Control, con carácter previo a la votación del informe para primer debate.</p>
+    </div>
+    <div>
+      <div class="ft">Marco jurídico aplicable</div>
+      <ol class="fb">
+        <li>Art. 136 CRE · Principio de unidad de materia</li>
+        <li>Art. 56 LOFL · Calificación del CAL</li>
+        <li>Art. 26 núm. 2 LOFL · Facultades de las comisiones</li>
+        <li>Art. 116 LOGJCC · Estándar de conexidad</li>
+        <li>Sentencia CC 028-12-SIN-CC · Unidad de materia</li>
+        <li>Sentencia CC 032-21-IN/21 · Escrutinio intermedio</li>
+        <li>Sentencia CC 058-11-IN/22 · Democracia deliberativa</li>
+        <li>Resolución CAL-NAOP-2025-2027-365 · 4 de marzo de 2026</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="footer-seal">
+    <div class="seal-left">
+      <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:64px;height:40px;border-radius:4px;overflow:hidden;">
+        <rect x="0" y="0"  width="80" height="25" fill="#F7D117"/>
+        <rect x="0" y="25" width="80" height="12.5" fill="#003082"/>
+        <rect x="0" y="37.5" width="80" height="12.5" fill="#CE1126"/>
+      </svg>
+      <div class="seal-names">
+        <span class="seal-an">Asamblea Nacional</span>
+        <span class="seal-rep">República del Ecuador</span>
+      </div>
+    </div>
+    <div class="seal-right">
+      Análisis Legislativo · Art. 120 núm. 9 CRE<br>
+      Junio 2026 · Ing. Mónica Alemán Mármol · Cantones de Pichincha
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
