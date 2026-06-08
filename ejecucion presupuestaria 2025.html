@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El presupuesto 2025: lo que los números reales dicen · Mónica Alemán</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --azul-an:     #0D3B8C;
+  --azul-ac:     #1B9BD1;
+  --azul-light:  #E8F4FC;
+  --gris-fondo:  #EEEFF3;
+  --gris-card:   #FFFFFF;
+  --gris-borde:  #D8DCE8;
+  --gris-texto:  #4A5568;
+  --rojo:        #C0392B;
+  --rojo-bg:     #FDECEA;
+  --amarillo:    #B7791F;
+  --amarillo-bg: #FFFBEB;
+  --verde:       #1A6B3A;
+  --verde-bg:    #EAFAF1;
+  --negro:       #1A1A2E;
+  --blanco:      #FFFFFF;
+  --sans:   'Montserrat', sans-serif;
+  --body:   'Open Sans', sans-serif;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --sombra: 0 2px 12px rgba(13,59,140,0.10);
+  --sombra-hover: 0 6px 24px rgba(13,59,140,0.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--body);
+  background:var(--gris-fondo);
+  color:var(--negro);
+  font-size:15px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:980px;margin:0 auto;padding:0 1.5rem}
+
+/* TOPBAR */
+.topbar{
+  background:var(--azul-an);
+  padding:.45rem 1.5rem;
+  display:flex;justify-content:space-between;align-items:center;
+  gap:1rem;flex-wrap:wrap;
+}
+.topbar-l{
+  font-family:var(--sans);font-size:.6rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.65);
+}
+.topbar-r{
+  font-family:var(--sans);font-size:.6rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;
+  background:var(--azul-ac);color:#fff;
+  padding:.22rem .75rem;border-radius:2px;
+}
+
+/* HEADER */
+.header{background:var(--gris-fondo);padding:2.5rem 1.5rem 0;}
+.header-inner{
+  max-width:980px;margin:0 auto;
+  display:grid;grid-template-columns:1fr auto;
+  gap:2rem;align-items:start;
+}
+.header-marca{display:flex;flex-direction:column;gap:.2rem;margin-bottom:1.5rem;}
+.header-card{
+  background:var(--blanco);border-radius:var(--r-md);
+  padding:1.25rem 1.5rem;box-shadow:var(--sombra);
+  max-width:520px;margin-bottom:1.5rem;
+}
+.hcard-tag{
+  font-family:var(--sans);font-size:.6rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--azul-ac);margin-bottom:.4rem;
+  display:flex;align-items:center;gap:.35rem;
+}
+.hcard-titulo{
+  font-family:var(--sans);font-size:1.5rem;font-weight:900;
+  color:var(--azul-an);line-height:1.15;margin-bottom:.3rem;
+}
+.hcard-titulo span{color:var(--azul-ac);}
+.hcard-sub{font-family:var(--body);font-size:.82rem;color:var(--gris-texto);line-height:1.55;}
+.header-fecha{
+  font-family:var(--sans);font-size:.68rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--azul-an);padding:.5rem 0 1.5rem;
+  border-top:2px solid var(--gris-borde);
+}
+
+/* ANIMACIONES */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.fu{animation:fadeUp .5s ease both;}
+.d1{animation-delay:.08s}.d2{animation-delay:.18s}
+.d3{animation-delay:.28s}.d4{animation-delay:.38s}
+
+/* PIE DE PÁGINA */
+footer{
+  background:var(--azul-an);
+  border-top:3px solid var(--azul-ac);
+  padding:2.5rem 1.5rem 1.5rem;
+}
+.footer-grid{
+  max-width:980px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:2rem;
+  margin-bottom:2rem;
+}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
+.ft{font-family:var(--sans);font-size:.88rem;font-weight:800;color:#fff;margin-bottom:.6rem;}
+.fb{font-size:.78rem;color:rgba(255,255,255,.65);line-height:1.7;}
+.fb li{padding:.1rem 0;}
+.footer-seal{
+  max-width:980px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+  padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.15);
+}
+.seal-left{display:flex;align-items:center;gap:1rem;}
+.seal-names{display:flex;flex-direction:column;gap:.1rem;}
+.seal-an{font-family:var(--sans);font-size:.85rem;font-weight:800;color:#fff;letter-spacing:.04em;}
+.seal-rep{
+  font-family:var(--sans);font-size:.55rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);
+}
+.seal-right{
+  font-family:var(--sans);font-size:.55rem;font-weight:600;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(255,255,255,.4);text-align:right;
+}
+
+/* DECLARACION */
+.declaracion{background:var(--azul-an);padding:2rem 1.5rem;}
+.declaracion-inner{max-width:980px;margin:0 auto}
+.declaracion blockquote{
+  font-family:var(--sans);font-size:1rem;font-weight:600;
+  font-style:italic;color:#fff;line-height:1.7;
+  border-left:4px solid var(--azul-ac);padding-left:1.25rem;
+  margin-bottom:.75rem;
+}
+.declaracion cite{
+  font-family:var(--sans);font-size:.62rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--azul-ac);font-style:normal;
+}
+
+/* SECCIONES */
+.seccion{padding:2.5rem 1.5rem;}
+.seccion.bg-blanco{background:var(--blanco);}
+.seccion.bg-gris{background:var(--gris-fondo);}
+.seccion.bg-azul{background:var(--azul-an);}
+.sec-etiqueta{
+  font-family:var(--sans);font-size:.58rem;font-weight:700;
+  letter-spacing:.24em;text-transform:uppercase;
+  color:var(--azul-ac);margin-bottom:.35rem;
+  display:flex;align-items:center;gap:.5rem;
+}
+.sec-etiqueta::before{content:'';display:block;width:20px;height:3px;background:var(--azul-ac);border-radius:2px;}
+.bg-azul .sec-etiqueta{color:#7EC8E3;}
+.bg-azul .sec-etiqueta::before{background:#7EC8E3;}
+.sec-titulo{
+  font-family:var(--sans);font-size:1.5rem;font-weight:900;
+  color:var(--azul-an);line-height:1.2;margin-bottom:1.25rem;
+}
+.bg-azul .sec-titulo{color:#fff;}
+.sec-titulo span{color:var(--azul-ac);}
+.bg-azul .sec-titulo span{color:#7EC8E3;}
+.sec-intro{
+  font-family:var(--body);font-size:.9rem;
+  color:var(--gris-texto);max-width:720px;
+  margin-bottom:1.75rem;line-height:1.7;
+}
+.bg-azul .sec-intro{color:rgba(255,255,255,.75);}
+
+/* KPI CARDS */
+.cards-wrap{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(170px,1fr));
+  gap:1rem;margin-bottom:2rem;
+}
+.kpi{
+  background:var(--blanco);border-radius:var(--r-md);
+  padding:1.1rem 1rem;box-shadow:var(--sombra);
+  border-top:3px solid var(--azul-ac);
+}
+.kpi.rojo{border-top-color:var(--rojo);}
+.kpi.verde{border-top-color:var(--verde);}
+.kpi.amarillo{border-top-color:var(--amarillo);}
+.kpi-num{
+  font-family:var(--sans);font-size:1.7rem;font-weight:900;
+  color:var(--azul-an);line-height:1;margin-bottom:.3rem;
+}
+.kpi.rojo .kpi-num{color:var(--rojo);}
+.kpi.verde .kpi-num{color:var(--verde);}
+.kpi.amarillo .kpi-num{color:var(--amarillo);}
+.kpi-label{font-family:var(--sans);font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gris-texto);}
+.kpi-sub{font-family:var(--body);font-size:.72rem;color:var(--gris-texto);margin-top:.3rem;line-height:1.4;}
+
+/* CAJA */
+.caja{
+  background:var(--blanco);border-radius:var(--r-md);
+  padding:1.4rem 1.5rem;box-shadow:var(--sombra);
+  margin-bottom:1.25rem;
+}
+.caja-titulo{
+  font-family:var(--sans);font-size:.85rem;font-weight:800;
+  color:var(--azul-an);margin-bottom:.5rem;
+  display:flex;align-items:center;gap:.5rem;
+}
+.caja p{font-family:var(--body);font-size:.87rem;color:var(--gris-texto);line-height:1.7;}
+.caja.rojo-borde{border-left:4px solid var(--rojo);}
+.caja.verde-borde{border-left:4px solid var(--verde);}
+.caja.amarillo-borde{border-left:4px solid var(--amarillo);}
+.caja.azul-borde{border-left:4px solid var(--azul-ac);}
+
+/* ANALOGIA */
+.analogia{
+  background:var(--azul-light);border-radius:var(--r-md);
+  padding:1.25rem 1.5rem;margin-bottom:1.5rem;
+  border-left:4px solid var(--azul-ac);
+}
+.analogia-titulo{
+  font-family:var(--sans);font-size:.7rem;font-weight:800;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:var(--azul-ac);margin-bottom:.4rem;
+}
+.analogia p{font-family:var(--body);font-size:.9rem;color:var(--azul-an);line-height:1.65;font-style:italic;}
+
+/* TABLA */
+.tabla-wrap{overflow-x:auto;margin-bottom:1.5rem;}
+table{width:100%;border-collapse:collapse;font-family:var(--body);font-size:.8rem;}
+thead th{
+  background:var(--azul-an);color:#fff;
+  font-family:var(--sans);font-size:.62rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.65rem .8rem;text-align:right;
+}
+thead th:first-child{text-align:left;}
+tbody tr:nth-child(even){background:var(--azul-light);}
+tbody tr:nth-child(odd){background:var(--blanco);}
+tbody tr.total-row{background:var(--azul-an);}
+tbody tr.total-row td{color:#fff;font-family:var(--sans);font-weight:700;font-size:.78rem;}
+tbody td{
+  padding:.55rem .8rem;color:var(--gris-texto);
+  vertical-align:middle;border-bottom:1px solid var(--gris-borde);
+  text-align:right;
+}
+tbody td:first-child{text-align:left;font-weight:600;color:var(--negro);}
+.td-rojo{color:var(--rojo)!important;font-weight:700;}
+.td-verde{color:var(--verde)!important;font-weight:700;}
+.fuente{font-family:var(--body);font-size:.72rem;color:var(--gris-texto);margin-top:.5rem;font-style:italic;}
+
+/* PASOS RECOMENDACIONES */
+.rec-lista{list-style:none;display:flex;flex-direction:column;gap:0;}
+.rec-item{
+  display:grid;grid-template-columns:3rem 1fr;
+  gap:1rem;align-items:start;
+  padding:1.25rem 0;border-bottom:1px solid var(--gris-borde);
+}
+.rec-item:last-child{border-bottom:none;}
+.rec-n{
+  width:3rem;height:3rem;flex-shrink:0;
+  background:var(--azul-an);border-radius:var(--r-sm);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--sans);font-size:1.2rem;font-weight:900;color:var(--azul-ac);
+}
+.rec-tit{font-family:var(--sans);font-size:.88rem;font-weight:800;color:var(--azul-an);margin-bottom:.3rem;}
+.rec-txt{font-size:.82rem;color:var(--gris-texto);line-height:1.65;}
+.rec-base{
+  margin-top:.4rem;display:inline-block;
+  font-family:var(--sans);font-size:.56rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;
+  background:var(--azul-light);color:var(--azul-an);
+  padding:.18rem .55rem;border-radius:3px;
+}
+
+/* HALLAZGO DESTACADO */
+.hallazgo{
+  background:var(--rojo-bg);border:1px solid #f5c6cb;
+  border-radius:var(--r-md);padding:1.25rem 1.5rem;
+  margin-bottom:1.25rem;display:flex;gap:1rem;align-items:flex-start;
+}
+.hallazgo-ico{font-size:1.6rem;flex-shrink:0;}
+.hallazgo-titulo{font-family:var(--sans);font-size:.85rem;font-weight:800;color:var(--rojo);margin-bottom:.3rem;}
+.hallazgo p{font-family:var(--body);font-size:.83rem;color:var(--rojo);line-height:1.65;opacity:.9;}
+
+/* HALLAZGO AMARILLO */
+.hallazgo.amarillo{background:var(--amarillo-bg);border-color:#f0d090;}
+.hallazgo.amarillo .hallazgo-titulo{color:var(--amarillo);}
+.hallazgo.amarillo p{color:var(--amarillo);}
+
+@media(max-width:640px){
+  .header-inner{grid-template-columns:1fr;}
+  .hcard-titulo{font-size:1.2rem;}
+  .sec-titulo{font-size:1.2rem;}
+  thead th,tbody td{font-size:.72rem;padding:.5rem .5rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- BARRA SUPERIOR -->
+<div class="topbar">
+  <span class="topbar-l">Asamblea Nacional · República del Ecuador · Período 2025–2029</span>
+  <span class="topbar-r">Fiscalización Presupuestaria · Marzo 2026</span>
+</div>
+
+<!-- CABECERA -->
+<header class="header">
+  <div class="header-inner">
+    <div>
+      <div class="header-marca fu" style="display:flex;flex-direction:column;gap:0;line-height:1;">
+        <div style="font-family:var(--sans);font-size:1.9rem;font-weight:400;color:var(--azul-an);letter-spacing:.01em;margin-bottom:.05em;">Mónica</div>
+        <div style="font-family:var(--sans);font-size:3.8rem;font-weight:900;color:var(--azul-ac);text-transform:uppercase;letter-spacing:-.02em;line-height:.95;margin-bottom:.18em;">ALEMÁN</div>
+        <div style="font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--azul-an);display:flex;align-items:center;gap:.5rem;">
+          ASAMBLEÍSTA
+          <svg viewBox="0 0 48 30" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:22px;border-radius:3px;display:inline-block;vertical-align:middle;">
+            <rect x="0" y="0"  width="48" height="15" fill="#F7D117"/>
+            <rect x="0" y="15" width="48" height="7.5" fill="#003082"/>
+            <rect x="0" y="22.5" width="48" height="7.5" fill="#CE1126"/>
+          </svg>
+        </div>
+      </div>
+      <div class="fu d1" style="font-family:var(--sans);font-size:.65rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gris-texto);padding-bottom:1rem;border-bottom:2px solid var(--gris-borde);">
+        MARZO 2026 · CANTONES DE PICHINCHA
+      </div>
+    </div>
+
+    <div class="header-card fu d2">
+      <div class="hcard-tag">Fiscalización Presupuestaria</div>
+      <div class="hcard-titulo">El 87% que <span>no existe</span></div>
+      <div class="hcard-sub">Cómo el gobierno manipuló el presupuesto 2025 para aparentar una ejecución que nunca ocurrió — y qué exigimos al respecto.</div>
+    </div>
+  </div>
+
+  <div class="wrap fu d3">
+    <div class="header-fecha">
+      Memorando AN-AMMR-2026-0038-M · Comisión de Régimen Económico y Tributario · 26 de marzo de 2026
+    </div>
+  </div>
+</header>
+
+<!-- DECLARACION -->
+<div class="declaracion">
+  <div class="declaracion-inner">
+    <blockquote>
+      "La ciudadanía tiene derecho a saber no solo cuánto se gastó, sino qué se logró con esos recursos. Cuando el denominador ha sido manipulado, el porcentaje de ejecución pierde todo valor analítico: cualquier gobierno puede reportar ejecuciones del 100% independientemente de su gestión real."
+    </blockquote>
+    <cite>Ing. Mónica Alemán Mármol · Asambleísta por los Cantones de Pichincha · Marzo 2026</cite>
+  </div>
+</div>
+
+<!-- SECCIÓN 1: EL TRUCO DEL DENOMINADOR -->
+<section class="seccion bg-gris">
+  <div class="wrap">
+    <div class="sec-etiqueta">Sección 01</div>
+    <div class="sec-titulo">El truco del <span>denominador</span>: cómo se fabrica un 87%</div>
+    <p class="sec-intro">El gobierno reportó una ejecución presupuestaria global del 87,20% en 2025. Esa cifra es técnicamente correcta, pero deliberadamente engañosa. Aquí explicamos por qué.</p>
+
+    <div class="analogia">
+      <div class="analogia-titulo">📖 La analogía que lo explica todo</div>
+      <p>Imagine que usted prometió ahorrar $1.000 este mes. Al final del mes solo ahorró $550. Para no reportar ese fracaso, tacha la meta en el papel y escribe $580. Ahora su "tasa de cumplimiento" es del 94,8%. El truco no está en cuánto ahorraron, sino en que cambiaron la meta sobre la marcha.</p>
+    </div>
+
+    <div class="caja rojo-borde">
+      <div class="caja-titulo"><span>⚠️</span> Eso es exactamente lo que ocurrió en Salud</div>
+      <p>La Asamblea Nacional aprobó para el Sectorial Salud un presupuesto de <strong>USD 4.877 millones</strong>. Entre octubre y diciembre de 2025, el Ministerio de Finanzas redujo ese monto en el papel a <strong>USD 2.846 millones</strong> — un recorte de USD 2.031 millones (-41,65%). Al final del año solo se gastaron USD 2.696 millones. Medido contra el presupuesto recortado, la ejecución fue del 94,72%. Medido contra lo que la Asamblea aprobó, la ejecución real fue del <strong>55,27%</strong>. Casi la mitad de lo prometido nunca llegó al sistema de salud.</p>
+    </div>
+
+    <div class="cards-wrap">
+      <div class="kpi rojo">
+        <div class="kpi-num">-41,65%</div>
+        <div class="kpi-label">Recorte en Salud</div>
+        <div class="kpi-sub">USD 2.031 millones menos que la Proforma aprobada por la Asamblea</div>
+      </div>
+      <div class="kpi rojo">
+        <div class="kpi-num">55,27%</div>
+        <div class="kpi-label">Ejecución real en Salud</div>
+        <div class="kpi-sub">vs. el 94,72% que reportó el gobierno</div>
+      </div>
+      <div class="kpi amarillo">
+        <div class="kpi-num">85,33%</div>
+        <div class="kpi-label">Ejecución real del PGE</div>
+        <div class="kpi-sub">vs. el 87,20% oficial — medida contra la Proforma original</div>
+      </div>
+      <div class="kpi rojo">
+        <div class="kpi-num">68,54%</div>
+        <div class="kpi-label">Ejecución real en Educación</div>
+        <div class="kpi-sub">El sector con peor desempeño de todos los sectoriales</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 2: LA TABLA COMPLETA -->
+<section class="seccion bg-blanco">
+  <div class="wrap">
+    <div class="sec-etiqueta">Sección 02</div>
+    <div class="sec-titulo">Los números <span>sector por sector</span></div>
+    <p class="sec-intro">Esta tabla compara lo que la Asamblea aprobó (Proforma), lo que el gobierno redujo en papel (Codificado), lo que efectivamente se gastó, y la ejecución real versus la aparente.</p>
+
+    <div class="tabla-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Sectorial</th>
+            <th>Proforma 2025 (M)</th>
+            <th>Codificado Dic (M)</th>
+            <th>Variación</th>
+            <th>Ejecutado Dic (M)</th>
+            <th>Ejec. vs Codif.</th>
+            <th>Ejec. real vs Proforma</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Salud</td>
+            <td>$4.877,43</td>
+            <td>$2.846,14</td>
+            <td class="td-rojo">-$2.031,29 (-41,65%)</td>
+            <td>$2.695,86</td>
+            <td>94,72%</td>
+            <td class="td-rojo">55,27%</td>
+          </tr>
+          <tr>
+            <td>Educación</td>
+            <td>$7.188,87</td>
+            <td>$7.182,40</td>
+            <td>-$6,47 (-0,09%)</td>
+            <td>$4.927,13</td>
+            <td>68,60%</td>
+            <td class="td-rojo">68,54%</td>
+          </tr>
+          <tr>
+            <td>Otros Sectoriales</td>
+            <td>$3.214,27</td>
+            <td>$2.849,11</td>
+            <td class="td-rojo">-$365,16 (-11,36%)</td>
+            <td>$2.570,47</td>
+            <td>90,22%</td>
+            <td class="td-rojo">79,97%</td>
+          </tr>
+          <tr>
+            <td>Tesoro Nacional</td>
+            <td>$19.278,46</td>
+            <td>$20.402,60</td>
+            <td class="td-verde">+$1.124,14 (+5,83%)</td>
+            <td>$18.225,64</td>
+            <td>94,54%</td>
+            <td>89,33%</td>
+          </tr>
+          <tr>
+            <td>Defensa Nacional</td>
+            <td>$2.093,20</td>
+            <td>$2.187,58</td>
+            <td class="td-verde">+$94,38 (+4,51%)</td>
+            <td>$2.094,61</td>
+            <td>95,75%</td>
+            <td class="td-verde">100,07%</td>
+          </tr>
+          <tr>
+            <td>Asuntos Internos</td>
+            <td>$2.221,47</td>
+            <td>$2.266,88</td>
+            <td class="td-verde">+$45,41 (+2,04%)</td>
+            <td>$2.126,79</td>
+            <td>93,82%</td>
+            <td>95,74%</td>
+          </tr>
+          <tr>
+            <td>Bienestar Social</td>
+            <td>$2.087,71</td>
+            <td>$2.345,55</td>
+            <td class="td-verde">+$257,84 (+12,35%)</td>
+            <td>$2.308,02</td>
+            <td>98,40%</td>
+            <td class="td-verde">110,55%</td>
+          </tr>
+          <tr class="total-row">
+            <td>TOTAL PGE</td>
+            <td>$40.961,41</td>
+            <td>$40.080,26</td>
+            <td>-$881,15 (-2,15%)</td>
+            <td>$34.949,20</td>
+            <td>87,20%</td>
+            <td>85,33%</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="fuente">Fuente: Ministerio de Economía y Finanzas / e-SIGEF. Elaboración propia.</p>
+    </div>
+
+    <div class="caja amarillo-borde">
+      <div class="caja-titulo"><span>🔍</span> Lo que revela la tabla</div>
+      <p>Los sectores que recibieron <strong>más dinero del planificado</strong> son Defensa, Asuntos Internos, Bienestar Social y el Tesoro Nacional (deuda). Los sectores que sufrieron <strong>recortes</strong> son Salud, Educación y los demás sectoriales sociales. El patrón es claro: el gobierno priorizó el pago de deuda, la seguridad y las transferencias sociales electorales, mientras recortaba lo prometido en salud y educación.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 3: LOS OTROS HALLAZGOS -->
+<section class="seccion bg-gris">
+  <div class="wrap">
+    <div class="sec-etiqueta">Sección 03</div>
+    <div class="sec-titulo">Más allá del truco contable: <span>los otros hallazgos</span></div>
+    <p class="sec-intro">La manipulación del denominador no es el único problema. El análisis del informe de ejecución reveló cuatro fallas adicionales graves.</p>
+
+    <div class="hallazgo">
+      <div class="hallazgo-ico">🏗️</div>
+      <div>
+        <div class="hallazgo-titulo">Obra pública casi inexistente: $0,59 de cada $100</div>
+        <p>De los USD 34.949 millones ejecutados, apenas <strong>USD 207 millones fueron a obra pública</strong> — el 0,59% del presupuesto total, equivalente al 0,16% del PIB. Por cada dólar en obra pública, el gobierno destinó más de <strong>cuarenta dólares al pago de deuda</strong> (USD 9.554 millones). Ecuador tiene déficits enormes en vías, hospitales, escuelas y agua potable, y el Estado prácticamente no invirtió en resolverlos.</p>
+      </div>
+    </div>
+
+    <div class="hallazgo">
+      <div class="hallazgo-ico">📚</div>
+      <div>
+        <div class="hallazgo-titulo">Educación: la Constitución exige 6% del PIB — se destinó el 2,53%</div>
+        <p>El Art. 298 de la Constitución obliga al Estado a destinar el <strong>6% del PIB a educación</strong>. En 2025, el gobierno llegó apenas al 2,53% — menos de la mitad de lo mandatado. Educación fue el sector con la peor ejecución de todo el gobierno (68,60%), agravada por la fusión caótica con Deporte y Cultura mediante el Decreto Ejecutivo 60, que paralizó la gestión institucional en vez de optimizarla.</p>
+      </div>
+    </div>
+
+    <div class="hallazgo amarillo">
+      <div class="hallazgo-ico">💸</div>
+      <div>
+        <div class="hallazgo-titulo">Bienestar Social disparado un 40% en año electoral</div>
+        <p>El Sectorial de Bienestar Social creció un 40,05% sobre lo planificado, alcanzando USD 2.308 millones. Más de USD 560 millones se destinaron a bonos y transferencias directas en un año electoral. Mientras se recortaba la salud en USD 2.031 millones, el gasto asistencial se disparaba. Eso genera preguntas legítimas sobre el uso clientelar de los recursos públicos.</p>
+      </div>
+    </div>
+
+    <div class="hallazgo">
+      <div class="hallazgo-ico">🏛️</div>
+      <div>
+        <div class="hallazgo-titulo">Los ministros no comparecieron — enviaron delegados</div>
+        <p>Ningún ministro de Estado se presentó personalmente ante la Comisión a rendir cuentas. El gobierno delegó a viceministros encargados, subsecretarios y directores — funcionarios de segundo y tercer nivel. Las explicaciones que dieron fueron puramente descriptivas: presentaron cifras sin vincularlas a resultados concretos ni al impacto en la población. No se habló de calidad del gasto ni de retorno social de la inversión.</p>
+      </div>
+    </div>
+
+    <div class="caja azul-borde" style="margin-top:1.5rem;">
+      <div class="caja-titulo"><span>👥</span> Sin sociedad civil: un informe a puertas cerradas</div>
+      <p>El análisis del informe de ejecución de USD 34.949 millones — que afecta a 18 millones de ecuatorianos — se realizó sin participación de organizaciones ciudadanas, academia, gremios, pueblos ni nacionalidades. La Constitución consagra el derecho a participar en todos los niveles de gobierno. Esa ausencia no es un detalle: <strong>vacía de legitimidad democrática el proceso de fiscalización</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 4: LO QUE EXIGIMOS -->
+<section class="seccion bg-blanco">
+  <div class="wrap">
+    <div class="sec-etiqueta">Sección 04</div>
+    <div class="sec-titulo">Lo que exigimos: <span>9 acciones concretas</span></div>
+    <p class="sec-intro">Presenté formalmente estas recomendaciones ante la Comisión de Régimen Económico para que consten en las conclusiones del informe de ejecución presupuestaria.</p>
+
+    <ul class="rec-lista">
+      <li class="rec-item">
+        <div class="rec-n">1</div>
+        <div>
+          <div class="rec-tit">Informe detallado de modificaciones del último trimestre</div>
+          <div class="rec-txt">El Ministerio de Finanzas debe entregar de inmediato un desglose de todas las modificaciones presupuestarias realizadas entre el 31 de octubre y el 31 de diciembre de 2025, por entidad, grupo de gasto, monto y justificación técnica. La Asamblea debe determinar si constituyeron un mecanismo deliberado de maquillaje.</div>
+          <span class="rec-base">Función Legislativa · Art. 120 núm. 9 CRE</span>
+        </div>
+      </li>
+      <li class="rec-item">
+        <div class="rec-n">2</div>
+        <div>
+          <div class="rec-tit">Reforma al reglamento: comparar contra la Proforma, no solo el codificado</div>
+          <div class="rec-txt">Los informes de ejecución deben incluir obligatoriamente la comparación contra la Proforma aprobada por la Asamblea Nacional y contra el codificado al 30 de septiembre — no solo el codificado final manipulado.</div>
+          <span class="rec-base">Reglamento de Comisiones Especializadas</span>
+        </div>
+      </li>
+      <li class="rec-item">
+        <div class="rec-n">3</div>
+        <div>
+          <div class="rec-tit">Auditoría especial de la Contraloría sobre el recorte en Salud</div>
+          <div class="rec-txt">Solicitar a la Contraloría General una auditoría especial sobre la reducción de USD 2.031 millones en el Sectorial Salud, para determinar si existieron irregularidades o si se vulneró el principio de legalidad presupuestaria.</div>
+          <span class="rec-base">Ley Orgánica de la Contraloría General del Estado</span>
+        </div>
+      </li>
+      <li class="rec-item">
+        <div class="rec-n">4</div>
+        <div>
+          <div class="rec-tit">Los ministros deben comparecer — no sus delegados</div>
+          <div class="rec-txt">Convocar a los titulares de todas las carteras de Estado a presentarse ante la Comisión en un plazo de 30 días para explicar personalmente la ejecución. El incumplimiento debe derivar en procesos de fiscalización política.</div>
+          <span class="rec-base">Art. 120 núm. 9 CRE · Reglamento AN Art. 78</span>
+        </div>
+      </li>
+      <li class="rec-item">
+        <div class="rec-n">5</div>
+        <div>
+          <div class="rec-tit">Audiencias públicas ciudadanas obligatorias</div>
+          <div class="rec-txt">Los futuros informes de ejecución deben incluir al menos tres audiencias públicas con sociedad civil, academia, organizaciones sociales y gremios. El análisis del gasto público no puede hacerse solo entre legisladores y funcionarios.</div>
+          <span class="rec-base">Art. 61 CRE · Participación ciudadana</span>
+        </div>
+      </li>
+      <li class="rec-item">
+        <div class="rec-n">6</div>
+        <div>
+          <div class="rec-tit">Piso mínimo del 10% del PGE para infraestructura</div>
+          <div class="rec-txt">El presupuesto 2026 debe establecer un piso mínimo de inversión en obra pública no inferior al 10% del PGE. El 0,59% de 2025 es incompatible con las necesidades de un país con déficits masivos en vías, hospitales y servicios básicos.</div>
+          <span class="rec-base">Art. 285 CRE · Política fiscal</span>
+        </div>
+      </li>
+      <li class="rec-item">
+        <div class="rec-n">7</div>
+        <div>
+          <div class="rec-tit">Cumplimiento inmediato del 6% del PIB para educación</div>
+          <div class="rec-txt">Exigir el cumplimiento del Art. 298 de la Constitución. El gobierno destinó apenas el 2,53% del PIB a educación en 2025 — un incumplimiento flagrante del mandato constitucional que no puede repetirse.</div>
+          <span class="rec-base">Art. 298 CRE · Preasignaciones constitucionales</span>
+        </div>
+      </li>
+      <li class="rec-item">
+        <div class="rec-n">8</div>
+        <div>
+          <div class="rec-tit">Límite del 3% para modificaciones del último trimestre</div>
+          <div class="rec-txt">Las modificaciones presupuestarias del cuarto trimestre no deben superar el 3% del codificado al 30 de septiembre por entidad. Reducciones mayores en el último trimestre son imposibles de ejecutar y solo sirven para maquillar indicadores.</div>
+          <span class="rec-base">COPLAFIP · Principio de legalidad presupuestaria</span>
+        </div>
+      </li>
+      <li class="rec-item">
+        <div class="rec-n">9</div>
+        <div>
+          <div class="rec-tit">Vincular el gasto con resultados reales — no solo con cifras contables</div>
+          <div class="rec-txt">Todos los informes futuros deben vincular cada línea de gasto con indicadores de resultado e impacto. No basta saber cuánto se gastó: la ciudadanía tiene derecho a saber qué se logró con esos recursos.</div>
+          <span class="rec-base">COPLAFIP Art. 39 · Estándares de evaluación de gasto</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- PIE DE PÁGINA -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="ft">Ing. Mónica Alemán Mármol</div>
+      <p class="fb">Asambleísta por los Cantones de Pichincha · Asamblea Nacional del Ecuador · Período 2025–2029.<br><br>
+      Observaciones presentadas mediante Memorando No. AN-AMMR-2026-0038-M del 26 de marzo de 2026, en el marco del tratamiento del Informe de Ejecución del Presupuesto General del Estado Período: Enero–Diciembre 2025 y Octubre–Diciembre 2025, previo al conocimiento, debate y votación en la Sesión Ordinaria No. 087-CRETRC-2026.</p>
+    </div>
+    <div>
+      <div class="ft">Fuentes de verificación</div>
+      <ol class="fb">
+        <li>Ministerio de Economía y Finanzas / e-SIGEF · Ejecución PGE 2025</li>
+        <li>Proforma Presupuestaria 2025 · Aprobada por la Asamblea Nacional</li>
+        <li>Art. 298 CRE · Preasignaciones constitucionales en educación</li>
+        <li>Decreto Ejecutivo N.º 60 · Fusión Ministerio de Educación, Deporte y Cultura</li>
+        <li>COPLAFIP · Principios de legalidad y planificación presupuestaria</li>
+        <li>Memorando AN-AMMR-2026-0038-M · 26 de marzo de 2026</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="footer-seal">
+    <div class="seal-left">
+      <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:64px;height:40px;border-radius:4px;overflow:hidden;">
+        <rect x="0" y="0"  width="80" height="25" fill="#F7D117"/>
+        <rect x="0" y="25" width="80" height="12.5" fill="#003082"/>
+        <rect x="0" y="37.5" width="80" height="12.5" fill="#CE1126"/>
+      </svg>
+      <div class="seal-names">
+        <span class="seal-an">Asamblea Nacional</span>
+        <span class="seal-rep">República del Ecuador</span>
+      </div>
+    </div>
+    <div class="seal-right">
+      Fiscalización Presupuestaria · Art. 120 núm. 9 CRE<br>
+      Marzo 2026 · Ing. Mónica Alemán Mármol · Cantones de Pichincha
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
